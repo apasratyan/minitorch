@@ -101,13 +101,13 @@ def relu_back(x: float, y: float):
 # - prod: take the product of lists
 
 
-def map(x: List[float], f: Callable[float]):
+def map(x: List[float], f: Callable[[float], float]):
     return [f(i) for i in x]
 
-def zipWith(x: List[float], y: List[float], f: Callable[float, float]):
+def zipWith(x: List[float], y: List[float], f: Callable[[float, float], float]):
     return [f(x[i], y[i]) for i in range(min(len(x), len(y)))]
 
-def reduce(x: List[float], f: Callable[float, float]):
+def reduce(x: List[float], f: Callable[[float, float], float]):
     res = x[0]
     for i in range(1, len(x)):
         res = f(res, x[i])
