@@ -3,7 +3,7 @@
 import math
 
 # ## Task 0.1
-from typing import Callable, Iterable
+from typing import List, Callable, Iterable
 
 #
 # Implementation of a prelude of elementary functions.
@@ -101,13 +101,13 @@ def relu_back(x: float, y: float):
 # - prod: take the product of lists
 
 
-def map(x: List[float], f: "function"):
+def map(x: List[float], f: Callable[float]):
     return [f(i) for i in x]
 
-def zipWith(x: List[float], y: List[float], f: "function"):
+def zipWith(x: List[float], y: List[float], f: Callable[float, float]):
     return [f(x[i], y[i]) for i in range(min(len(x), len(y)))]
 
-def reduce(x: List[float], f: "function"):
+def reduce(x: List[float], f: Callable[float, float]):
     res = x[0]
     for i in range(1, len(x)):
         res = f(res, x[i])
