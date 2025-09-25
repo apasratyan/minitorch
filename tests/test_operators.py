@@ -108,7 +108,7 @@ def test_sigmoid(a: float) -> None:
     * It is  strictly increasing.
     """
     assert 0.0 <= sigmoid(a) <= 1.0
-    assert 1.0 - sigmoid(a) == sigmoid(-a)
+    assert_close(1.0 - sigmoid(a), sigmoid(-a))
     assert sigmoid(0.0) == 0.5
     assert sigmoid(a - 1.0) < sigmoid(a) < sigmoid(a + 1.0)
 
@@ -126,9 +126,9 @@ def test_symmetric() -> None:
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
-    assert mul(10.0, 7.0) == mul(7.0, 10.0)
-    assert mul(3.0, 5.0) == mul(5.0, 3.0)
-    assert mul(2.0, 11.0) == mul(11.0, 2.0)
+    assert_close(mul(10.0, 7.0), mul(7.0, 10.0))
+    assert_close(mul(3.0, 5.0), mul(5.0, 3.0))
+    assert_close(mul(2.0, 11.0), mul(11.0, 2.0))
 
 
 @pytest.mark.task0_2
@@ -137,7 +137,7 @@ def test_distribute() -> None:
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    assert mul(5, add(7, 11)) == add(mul(5, 7), mul(5, 11))
+    assert_close(mul(5, add(7, 11)), add(mul(5, 7), mul(5, 11)))
 
 
 @pytest.mark.task0_2
@@ -145,9 +145,9 @@ def test_other() -> None:
     """
     Write a test that ensures some other property holds for your functions.
     """
-    assert mul(5, inv(5)) == 1.0
-    assert mul(11, inv(11)) == 1.0
-    assert mul(1421, inv(1421)) == 1.0
+    assert_close(mul(5, inv(5)), 1.0)
+    assert_close(mul(11, inv(11)), 1.0)
+    assert_close(mul(1421, inv(1421)), 1.0)
 
 
 # ## Task 0.3  - Higher-order functions
@@ -175,8 +175,7 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     Write a test that ensures that the sum of `ls1` plus the sum of `ls2`
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError('Need to implement for Task 0.3')
+    assert_close(add(sum(ls1), sum(ls2)), sum(addLists(ls1, ls2)))
 
 
 @pytest.mark.task0_3
