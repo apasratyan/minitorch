@@ -52,7 +52,7 @@ def eq(x: float, y: float):
     return float(x == y)
 
 def max(x: float, y: float):
-    return max(x, y)
+    return x if x > y else y
 
 def is_close(x: float, y: float):
     return float(abs(x - y) < 1e-2)
