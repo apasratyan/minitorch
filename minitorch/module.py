@@ -51,7 +51,7 @@ class Module:
         """
         par_with_names = [(par_name, self._parameters[par_name]) for par_name in self._parameters]
         for mod_name in self._modules:
-            par_with_names.extend(self._modules[mod_name].named_parameters())
+            par_with_names.extend([(mod_name + "." + i[0], i[1]) for i in self._modules[mod_name].named_parameters()])
         return par_with_names
 
     def parameters(self) -> Sequence[Parameter]:
