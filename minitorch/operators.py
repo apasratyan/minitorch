@@ -46,16 +46,16 @@ def neg(x: float):
     return -x
 
 def lt(x: float, y: float):
-    return x < y
+    return float(x < y)
 
 def eq(x: float, y: float):
-    return x == y
+    return float(x == y)
 
 def max(x: float, y: float):
     return max(x, y)
 
 def is_close(x: float, y: float):
-    return abs(x - y) < 1e-2
+    return float(abs(x - y) < 1e-2)
 
 def sigmoid(x: float):
     if x >= 0:
@@ -82,7 +82,7 @@ def inv_back(x: float, y: float):
     return -y / (x ** 2)
 
 def relu_back(x: float, y: float):
-    return (x > 0) * y
+    return float(x > 0) * y
 
 
 # ## Task 0.3
@@ -101,4 +101,26 @@ def relu_back(x: float, y: float):
 # - prod: take the product of lists
 
 
-# TODO: Implement for Task 0.3.
+def map(x: List[float], f: "function"):
+    return [f(i) for i in x]
+
+def zipWith(x: List[float], y: List[float], f: "function"):
+    return [f(x[i], y[i]) for i in range(min(len(x), len(y)))]
+
+def reduce(x: List[float], f: "function"):
+    res = x[0]
+    for i in range(1, len(x)):
+        res = f(res, x[i])
+    return res
+
+def negList(x: List[float]):
+    return map(x, neg)
+
+def addLists(x: List[float], y: List[float]):
+    return zipWith(x, y, add)
+
+def sum(x: List[float]):
+    return reduce(x, add)
+
+def prod(x: List[float]):
+    return reduce(x, mul)
