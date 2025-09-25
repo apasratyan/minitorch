@@ -120,6 +120,8 @@ def addLists(x: List[float], y: List[float]):
     return zipWith(x, y, add)
 
 def sum(x: List[float]):
+    if len(x) == 0:
+        return 0
     return reduce(x, add)
 
 def prod(x: List[float]):
