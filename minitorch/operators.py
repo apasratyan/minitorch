@@ -58,13 +58,13 @@ def is_close(x: float, y: float):
     return float(abs(x - y) < 1e-2)
 
 def sigmoid(x: float):
-    if x >= 0:
+    if x >= 0.0:
         return 1 / (1 + math.exp(-x))
     else:
         return math.exp(x) / (1 + math.exp(x))
 
 def relu(x: float):
-    return max(x, 0)
+    return 0.0 if x < 0.0 else x
 
 def log(x: float):
     return math.log(x)
