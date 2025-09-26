@@ -43,7 +43,7 @@ def add(x: float, y: float):
     return x + y
 
 def neg(x: float):
-    return -x
+    return 0.0 - x
 
 def lt(x: float, y: float):
     return float(x < y)
