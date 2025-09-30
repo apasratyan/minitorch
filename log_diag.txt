@@ -1,0 +1,56 @@
+training info:
+PTS = 50
+HIDDEN = 5
+RATE = 0.5
+DATASET = Diag
+
+Epoch  10  loss  15.686281028789892 correct 44
+Epoch  20  loss  13.379398799343516 correct 44
+Epoch  30  loss  11.033802636076093 correct 44
+Epoch  40  loss  8.675322368310473 correct 44
+Epoch  50  loss  6.593032999826147 correct 48
+Epoch  60  loss  5.506248570224888 correct 48
+Epoch  70  loss  4.810382213048577 correct 48
+Epoch  80  loss  4.223919690341807 correct 49
+Epoch  90  loss  3.8024357051792887 correct 49
+Epoch  100  loss  3.4162714365137816 correct 49
+Epoch  110  loss  3.1051264873243345 correct 49
+Epoch  120  loss  2.8518756658381847 correct 50
+Epoch  130  loss  2.6333860959598367 correct 50
+Epoch  140  loss  2.442362162039496 correct 50
+Epoch  150  loss  2.27372652536724 correct 50
+Epoch  160  loss  2.12371904279865 correct 50
+Epoch  170  loss  1.9894375694402024 correct 50
+Epoch  180  loss  1.8685788696575643 correct 50
+Epoch  190  loss  1.7662470786121045 correct 50
+Epoch  200  loss  1.6610809943186795 correct 50
+Epoch  210  loss  1.5738059536772049 correct 50
+Epoch  220  loss  1.5039442512205305 correct 50
+Epoch  230  loss  1.4324438878328942 correct 50
+Epoch  240  loss  1.3662999433215182 correct 50
+Epoch  250  loss  1.3049631779997364 correct 50
+Epoch  260  loss  1.2479545518630044 correct 50
+Epoch  270  loss  1.1948598582252234 correct 50
+Epoch  280  loss  1.1453173149788227 correct 50
+Epoch  290  loss  1.0866095420063866 correct 50
+Epoch  300  loss  1.0458146673750923 correct 50
+Epoch  310  loss  1.0075200984326655 correct 50
+Epoch  320  loss  0.9714717249565534 correct 50
+Epoch  330  loss  0.9374632413952578 correct 50
+Epoch  340  loss  0.9053198731104403 correct 50
+Epoch  350  loss  0.8748909917863062 correct 50
+Epoch  360  loss  0.8460449860623521 correct 50
+Epoch  370  loss  0.8186655874437054 correct 50
+Epoch  380  loss  0.7926491617968787 correct 50
+Epoch  390  loss  0.7679026594134949 correct 50
+Epoch  400  loss  0.7443420127668288 correct 50
+Epoch  410  loss  0.7218908930406585 correct 50
+Epoch  420  loss  0.7004796865648473 correct 50
+Epoch  430  loss  0.6800446619633665 correct 50
+Epoch  440  loss  0.6605272782925128 correct 50
+Epoch  450  loss  0.6418736036046029 correct 50
+Epoch  460  loss  0.6240338214422578 correct 50
+Epoch  470  loss  0.6069618083498171 correct 50
+Epoch  480  loss  0.5906147694452321 correct 50
+Epoch  490  loss  0.5749529219588789 correct 50
+Epoch  500  loss  0.5599392187611811 correct 50
